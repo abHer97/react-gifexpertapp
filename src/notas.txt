@@ -1,0 +1,24 @@
+cuando se usa useState() pero se requiere un estado en blanco no debe dejarse los parentesis limpios
+es necesario ser explicito y poner string vacio '' o un 0 o segun sea el caso, de lo contrario el estado
+sera undefined y cuando algo cambie tendremos un error y la app crasheara
+
+cuando se renderiza un componente se lee y ejecuta todo el codigo dentro del archivo.js por lo tanto se
+agrega useEffect() para prevenirlo y quedaria de la siguiente manera
+
+            useEffect(() => {
+                function();
+            }, []);
+
+donde function es lo que queremos ejecutar y el arreglo vacio [] son las dependencias que se evaluaran para
+detectar un cambio y volver a cargar el contenido de useEffect y si no anotamos ninguna entonces estamos 
+indicando que solo se debe ejecutar el codigo 1 vez y nada mas, asi cuando algo cambie no se estara 
+ejecutando nuevamente aquello que este dentro del useEffect() y asi mejoramos el rendimiento de nuestra app
+
+los hooks no son mas que funciones, react ya incorpora algunos y por convencion empiezan con el prefijo
+use
+
+podemos tener custom hooks, osea funciones creadas por uno mismo y es recomendable seguir la convencion del
+prefijo use
+
+los hooks son parecidos a los functional components porque tambien pueden contener el useState, useEffect, 
+useReducer etc etc etc

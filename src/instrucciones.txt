@@ -1,0 +1,7 @@
+1 crear archivo de componente.js
+2 se puede usar el snippet rafc para importar react y crear el functional component
+3 agregar la logica del componente dentro de la funcion que ya esta exportada
+ si no esta exportado el componente, exportarlo por defecto preferentemente
+4 abrir index.js
+5 importar el componente
+6 renderizar el componente agregandolo en reactDOM.render preferentemente como etiqueta html
